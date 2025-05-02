@@ -4,26 +4,27 @@ import java.awt.print.Printable;
 
 public class Cake implements ProductMethods {
     String flavour;
-    boolean vegetarian;
+    String vegetarian;
     double price;
-    Cake(String flavour, boolean vegetarian, double price) {
+
+    public Cake(String flavour, String vegetarian, double price) {
         this.flavour = flavour;
         this.vegetarian = vegetarian;
         this.price = price;
     }
 
     @Override
-    public double getFlavour() {
-        return 0;
+    public String getFlavour() {
+        return flavour;
     }
 
     @Override
-    public String getName() {
-        return "";
+    public double getPrice() {
+        return price;
     }
 
     @Override
     public String getType() {
-        return "";
+        return vegetarian;
     }
 }
